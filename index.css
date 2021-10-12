@@ -20,6 +20,8 @@ a {
 section {
   position: relative;
   background-image: url("bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   height: 45vh;
   z-index: 1;
 }
@@ -161,10 +163,10 @@ header {
 }
 
 #skills {
-  
+  margin-bottom: 50px;
 }
 
-#skills h1 {
+#skills h1, #experience h1 {
   text-align: center;
   text-transform: capitalize;
   margin-bottom: 20px;
@@ -174,6 +176,9 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  box-shadow: 0 0 3px #9da0a7;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .skills-container > div {
@@ -216,4 +221,132 @@ progress::-webkit-progress-value {
 
 progress::-webkit-progress-bar {
   background: #07cb79;
+}
+
+#experience {
+  margin-bottom: 50px;
+  padding-top: 20px;
+}
+
+.work-experience-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.work-experience-container .experience {
+  flex: 0 0 45%;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #9da0a7;
+  padding: 15px;
+  border-top: 3px solid #07cb79;
+}
+
+.experience > * {
+  margin-bottom: 10px;
+}
+
+.experience > p:last-of-type {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+.experience > h2 {
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 400px) {
+  header {
+    width: 90%;
+    margin-top: -200px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .basic-info {
+    background-color: white;
+    display: block;
+    padding: 0;
+  }
+  
+  .img-container {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .img-container img {
+    width: 100%;
+    border-radius: 2px;
+  }
+  
+  .info-container {
+    padding: 25px;
+  }
+  
+  .info-piece {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .info-piece > p:first-of-type {
+    margin-bottom: 5px;
+  }
+
+  .info-piece:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .info-container hr {
+    margin: 0;
+  }
+  
+  .socials a {
+    font-size: 20px;
+  }
+
+  #about {
+    margin-bottom: 30px;
+  }
+
+  #skills {
+    margin-bottom: 30px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .skills-container {
+    display: block;
+  }
+
+  #experience {
+    margin-bottom: 30px;
+    padding-top: 0;
+  }
+
+  #experience h1 {
+    margin-bottom: 0;
+  }
+  
+  .work-experience-container {
+    display: block;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .work-experience-container .experience:first-of-type {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  #skills {
+    margin-bottom: 30px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
